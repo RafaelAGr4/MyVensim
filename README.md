@@ -10,7 +10,7 @@
 - \MyVensim
 
 
-  \bin
+  -\bin
 
   + \src
 
