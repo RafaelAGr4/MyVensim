@@ -8,7 +8,9 @@
 ## Estrutura do projeto
 
 - \MyVensim
+
   +\bin
+
   + \src
 
     main.cpp
