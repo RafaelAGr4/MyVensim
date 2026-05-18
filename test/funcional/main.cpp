@@ -10,7 +10,11 @@ int main() {
     logisticalFuncionalTest();
     complexFuncionalTest();
 
+<<<<<<< HEAD
     std::cout << "Os testes tiveram sucesso " << std::endl;
+=======
+    std::cout << "All functional tests executed successfully!" << std::endl;
+>>>>>>> b3ba545dba7ced8fa45a1470ac11d8147dd86ff1
     return true; 
 }
 
