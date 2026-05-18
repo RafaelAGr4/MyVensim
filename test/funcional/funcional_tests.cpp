@@ -21,6 +21,9 @@ void exponentialFuncionalTest() {
     
     model.run(0, 100);
 
+    cout << "Valor final de pop1: " << pop1.getValue() << " (Esperado: ~36.6032)" << endl;
+    cout << "Valor final de pop2: " << pop2.getValue() << " (Esperado: ~63.3968)" << endl;
+
     assert(abs(pop1.getValue() - 36.6032) < 0.0001);
     assert(abs(pop2.getValue() - 63.3968) < 0.0001);
 
@@ -41,6 +44,9 @@ void logisticalFuncionalTest() {
     model.add(&logistica);
     
     model.run(0, 100);
+
+    cout << "Valor final de p1: " << p1.getValue() << " (Esperado: ~88.2167)" << endl;
+    cout << "Valor final de p2: " << p2.getValue() << " (Esperado: ~21.7833)" << endl;
 
     assert(abs(p1.getValue() - 88.2167) < 0.0001);
     assert(abs(p2.getValue() - 21.7833) < 0.0001);
@@ -69,6 +75,12 @@ void complexFuncionalTest() {
     model.add(&f); model.add(&g); model.add(&r); model.add(&t); model.add(&u); model.add(&v);
 
     model.run(0, 100);
+
+    cout << "Valor final de Q1: " << q1.getValue() << " (Esperado: ~31.8513)" << endl;
+    cout << "Valor final de Q2: " << q2.getValue() << " (Esperado: ~18.4003)" << endl;
+    cout << "Valor final de Q3: " << q3.getValue() << " (Esperado: ~77.1143)" << endl;
+    cout << "Valor final de Q4: " << q4.getValue() << " (Esperado: ~56.1728)" << endl;
+    cout << "Valor final de Q5: " << q5.getValue() << " (Esperado: ~16.4612)" << endl;
 
     assert(abs(q1.getValue() - 31.8513) < 0.0001);
     assert(abs(q2.getValue() - 18.4003) < 0.0001);
