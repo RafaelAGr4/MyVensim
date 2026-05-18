@@ -55,7 +55,7 @@ ExponentialFlow::~ExponentialFlow() {}
 
 double ExponentialFlow::execute() {
     if (getOrigin() != nullptr) {
-        return 0.01 * getDestination()->getValue();
+        return 0.01 * getOrigin()->getValue();
     }
     return 0.0;
 }
