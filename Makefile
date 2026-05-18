@@ -19,7 +19,7 @@ SRC_API = $(SRC_DIR)/mySim.cpp
 all: create_bin $(EXEC_MAIN) $(EXEC_FUNC)
 
 create_bin:
-	mkdir -p $(BIN_DIR)
+	mkdir $(BIN_DIR)
 
 
 $(EXEC_MAIN): $(SRC_DIR)/main.cpp $(SRC_API)
