@@ -64,4 +64,23 @@ public:
     double getTime() const;
 };
 
+class ExponentialFlow : public Flow {
+public:
+
+    ExponentialFlow(System* origin = nullptr, System* destination = nullptr);
+    virtual ~ExponentialFlow();
+
+    virtual double execute() override;
+};
+
+class LogisticFlow : public Flow {
+private:
+    double pMax; 
+
+public:
+    LogisticFlow(System* origin = nullptr, System* destination = nullptr, double pMax = 0.0);
+    virtual ~LogisticFlow();
+
+    virtual double execute() override;
+};
 #endif // MYSIM_H

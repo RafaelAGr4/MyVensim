@@ -1,14 +1,10 @@
 #include "mySim.h"
 
-
-
-//Construtor
 System::System(std::string name, double value) {
     this->name = name;
     this->value = value;
 }
 
-//Destrutor
 System::~System() {}
 
 std::string System::getName() const {
@@ -23,13 +19,12 @@ void System::setValue(double v) {
     value = v;
 }
 
-//Construtor
 Flow::Flow(std::string name, System* origin, System* destination) {
     this->name = name;
     this->origin = origin;
     this->destination = destination;
 }
-//Destrutor
+
 Flow::~Flow() {}
 
 void Flow::setOrigin(System* s) {
@@ -52,12 +47,37 @@ std::string Flow::getName() const {
     return name;
 }
 
-//Construtor: inicializa o tempo do modelo
+ExponentialFlow::ExponentialFlow(System* origin, System* destination)
+    : Flow("Exponencial", origin, destination) {}
+
+ExponentialFlow::~ExponentialFlow() {}
+
+double ExponentialFlow::execute() {
+    if (getDestination() != nullptr) {
+        return 0.01 * getDestination()->getValue();
+    }
+    return 0.0;
+}
+
+LogisticFlow::LogisticFlow(System* origin, System* destination, double pMax)
+    : Flow("Logistico", origin, destination) {
+    this->pMax = pMax;
+}
+
+LogisticFlow::~LogisticFlow() {}
+
+double LogisticFlow::execute() {
+    if (getDestination() != nullptr) {
+        double v = getDestination()->getValue();
+        return 0.01 * v * (1.0 - (v / pMax));
+    }
+    return 0.0;
+}
+
 Model::Model(double time) {
     this->time = time;
 }
 
-//Destrutor
 Model::~Model() {
     systems.clear();
     flows.clear();
@@ -77,6 +97,22 @@ double Model::getTime() const {
 
 void Model::run(double start, double end) {
     for (time = start; time < end; time += 1.0) {
+        
+        std::vector<double> results;
+        for (size_t i = 0; i < flows.size(); ++i) {
+            results.push_back(flows[i]->execute());
+        }
 
+        for (size_t i = 0; i < flows.size(); ++i) {
+            System* origin = flows[i]->getOrigin();
+            System* destination = flows[i]->getDestination();
+
+            if (origin != nullptr) {
+                origin->setValue(origin->getValue() - results[i]);
+            }
+            if (destination != nullptr) {
+                destination->setValue(destination->getValue() + results[i]);
+            }
+        }
     }
 }
