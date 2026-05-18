@@ -6,7 +6,7 @@
 using namespace std;
 
 void exponentialFuncionalTest() {
-    cout << "Running Exponential Funcional Test..." << endl;
+    cout << "Teste da função exponencial" << endl;
 
     System pop("Populacao", 100.0);
     ExponentialFlow nascimento(nullptr, &pop);
@@ -16,13 +16,13 @@ void exponentialFuncionalTest() {
     model.add(&nascimento);
     model.run(0, 100);
 
-    cout << "Exponential Test Passed! Final Value: " << pop.getValue() << "\n" << endl;
+    cout << "Teste sucedido, valor final:  " << pop.getValue() << "\n" << endl;
 }
 
 void logisticalFuncionalTest() {
-    cout << "Running Logistical Funcional Test..." << endl;
+    cout << "Teste da função logística" << endl;
 
-    System pop("Populacao", 100.0);
+    System pop("População", 100.0);
     LogisticFlow nascimento(nullptr, &pop, 160.0);
     Model model;
 
@@ -30,10 +30,10 @@ void logisticalFuncionalTest() {
     model.add(&nascimento);
     model.run(0, 100);
 
-    cout << "Logistical Test Passed! Final Value: " << pop.getValue() << "\n" << endl;
+    cout << "Teste sucedido, valor final:  " << pop.getValue() << "\n" << endl;
 }
 
 void complexFuncionalTest() {
-    cout << "Running Complex Funcional Test..." << endl;
-    cout << "Complex Test Finished.\n" << endl;
+    cout << "Teste funcional complexo" << endl;
+    cout << "Teste sucedido\n" << endl;
 }

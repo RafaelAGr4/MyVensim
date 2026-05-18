@@ -10,7 +10,7 @@ int main() {
     logisticalFuncionalTest();
     complexFuncionalTest();
 
-    std::cout << "All functional tests executed successfully!" << std::endl;
+    std::cout << "Os testes tiveram sucesso " << std::endl;
     return true; 
 }
 
