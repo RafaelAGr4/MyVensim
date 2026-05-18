@@ -12,7 +12,7 @@ int main() {
 
     std::cout << "Os testes tiveram sucesso " << std::endl;
     
-    std::cout << "All functional tests executed successfully!" << std::endl;
+    std::cout << "Todos os teste concluidos com sucesso!" << std::endl;
     return 0; 
 }
 
