@@ -19,6 +19,9 @@ public:
     System(std::string name = "", double value = 0.0);
     virtual ~System();
 
+    System(const System& other);
+    System& operator=(const System& other);
+
     std::string getName() const;
     double getValue() const;
     void setValue(double v);
@@ -34,6 +37,9 @@ public:
     // Construtor e Destrutor
     Flow(std::string name = "", System* origin = nullptr, System* destination = nullptr);
     virtual ~Flow();
+
+    Flow(const Flow& other);
+    Flow& operator=(const Flow& other);
 
     void setOrigin(System* s);
     System* getOrigin() const;
@@ -57,6 +63,9 @@ public:
     Model(double time = 0.0);
     virtual ~Model();
 
+    Model(const Model& other);
+    Model& operator=(const Model& other);
+
     void add(System* s);
     void add(Flow* f);
     void run(double start, double end);
@@ -70,6 +79,9 @@ public:
     ExponentialFlow(System* origin = nullptr, System* destination = nullptr);
     virtual ~ExponentialFlow();
 
+    ExponentialFlow(const ExponentialFlow& other);
+    ExponentialFlow& operator=(const ExponentialFlow& other);
+
     virtual double execute() override;
 };
 
@@ -80,6 +92,9 @@ private:
 public:
     LogisticFlow(System* origin = nullptr, System* destination = nullptr, double pMax = 0.0);
     virtual ~LogisticFlow();
+
+    LogisticFlow(const LogisticFlow& other);
+    LogisticFlow& operator=(const LogisticFlow& other);
 
     virtual double execute() override;
 };
