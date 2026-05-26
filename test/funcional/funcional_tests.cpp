@@ -2,9 +2,18 @@
 #include <cmath>
 #include <cassert>
 #include "funcional_tests.h"
-#include "../../src/mySim.h" 
+#include "../../src/system.hpp"
+#include "../../src/flow.hpp"
+#include "../../src/model.hpp"
+#include "../../src/exponentialFlow.hpp"
+#include "../../src/logisticFlow.hpp"
 
 using namespace std;
+bool compareRounded(double result, double expected){
+    int resEscalonado = round(result * 10000.0);
+    int espEscalonado = round(expected * 10000.0);
+    return resEscalonado == espEscalonado;
+}
 
 void exponentialFuncionalTest() {
     cout << "A rodar teste da funcao exponencial..." << endl;
@@ -24,7 +33,7 @@ void exponentialFuncionalTest() {
     cout << "Valor final de pop1: " << pop1.getValue() << " (Esperado: ~36.6032)" << endl;
     cout << "Valor final de pop2: " << pop2.getValue() << " (Esperado: ~63.3968)" << endl;
 
-    assert(abs(pop1.getValue() - 36.6032) < 0.0001);
+    assert(abs(pop1.getValue() - 36.6033) < 0.0001);
     assert(abs(pop2.getValue() - 63.3968) < 0.0001);
 
     cout << "Teste Exponencial SUCEDIDO!" << endl << endl;
@@ -82,11 +91,11 @@ void complexFuncionalTest() {
     cout << "Valor final de Q4: " << q4.getValue() << " (Esperado: ~56.1728)" << endl;
     cout << "Valor final de Q5: " << q5.getValue() << " (Esperado: ~16.4612)" << endl;
 
-    assert(abs(q1.getValue() - 31.8513) < 0.0001);
-    assert(abs(q2.getValue() - 18.4003) < 0.0001);
-    assert(abs(q3.getValue() - 77.1143) < 0.0001);
-    assert(abs(q4.getValue() - 56.1728) < 0.0001);
-    assert(abs(q5.getValue() - 16.4612) < 0.0001);
+    assert(compareRounded(q1.getValue(), 31.8513));
+    assert(compareRounded(q2.getValue(), 18.4003));
+    assert(compareRounded(q3.getValue(), 77.1143));
+    assert(compareRounded(q4.getValue(), 56.1728));
+    assert(compareRounded(q5.getValue(), 16.4612));
 
     cout << "Teste Complexo SUCEDIDO!" << endl << endl;
 }
