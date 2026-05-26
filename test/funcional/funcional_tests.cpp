@@ -33,8 +33,8 @@ void exponentialFuncionalTest() {
     cout << "Valor final de pop1: " << pop1.getValue() << " (Esperado: ~36.6032)" << endl;
     cout << "Valor final de pop2: " << pop2.getValue() << " (Esperado: ~63.3968)" << endl;
 
-    assert(compareRounded(pop1->getValue(), 36.6032));
-    assert(compareRounded(pop2->getValue(), 63.3968));
+    assert(compareRounded(pop1.getValue(), 36.6032));
+    assert(compareRounded(pop2.getValue(), 63.3968));
 
     cout << "Teste Exponencial SUCEDIDO!" << endl << endl;
 }
@@ -57,8 +57,8 @@ void logisticalFuncionalTest() {
     cout << "Valor final de p1: " << p1.getValue() << " (Esperado: ~88.2167)" << endl;
     cout << "Valor final de p2: " << p2.getValue() << " (Esperado: ~21.7833)" << endl;
 
-    assert(compareRounded(p1->getValue(), 88.2167));
-    assert(compareRounded(p2->getValue(), 21.7833));
+    assert(compareRounded(p1.getValue(), 88.2167));
+    assert(compareRounded(p2.getValue(), 21.7833));
 
     cout << "Teste Logistico SUCEDIDO!" << endl << endl;
 }
