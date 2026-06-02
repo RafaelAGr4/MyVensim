@@ -1,19 +1,10 @@
 #include "logisticFlow.hpp"
-LogisticFlow::LogisticFlow(System* origin, System* destination, double pMax)
-    : Flow("Logistico", origin, destination) {
-    this->pMax = pMax;
-}
+
+LogisticFlow::LogisticFlow(std::string name, System* origin, System* destination, double pMax)
+    : FlowImpl(name, origin, destination), pMax(pMax) {}
+
 LogisticFlow::~LogisticFlow() {}
 
-LogisticFlow::LogisticFlow(const LogisticFlow& other) : Flow(other) {
-    this->pMax = other.pMax;
-}
-LogisticFlow& LogisticFlow::operator=(const LogisticFlow& other) {
-    if (this == &other) return *this;
-    Flow::operator=(other);
-    this->pMax = other.pMax;
-    return *this;
-}
 double LogisticFlow::execute() {
     if (getDestination() != nullptr) {
         double v = getDestination()->getValue();
@@ -21,3 +12,6 @@ double LogisticFlow::execute() {
     }
     return 0.0;
 }
+
+double LogisticFlow::getPMax() const { return pMax; }
+void LogisticFlow::setPMax(double p) { pMax = p; }
