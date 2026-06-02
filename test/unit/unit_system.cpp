@@ -16,10 +16,7 @@ void unit_System_constructor(void) {
     delete s2;
 }
 
-void unit_System_destructor(void) {
-    // O destrutor será testado implicitamente ao final do escopo ou via delete,
-    // mas não há assertivas específicas para testar o destrutor padrão do compilador.
-}
+void unit_System_destructor(void) {}
 
 void unit_System_getName(void) {
     System* s = new SystemImpl("SystemName", 0.0);

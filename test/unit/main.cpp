@@ -13,11 +13,9 @@ int main(){
     cout << "System [OK]" << endl;
     run_unit_tests_Flow();
     cout << "Flow [OK]" << endl;
-    // run_unit_tests_FlowTypes();
-    cout << "FlowType [OK]" << endl;
     run_unit_tests_Model();
     cout << "Model [OK]" << endl;
-    cout << "All test [OK]!" << endl;
+    cout << "All tests [OK]!" << endl;
     return 0;
 
 }
