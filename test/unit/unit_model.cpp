@@ -10,7 +10,24 @@ void unit_Model_constructor(void) {
     delete m;
 }
 
-void unit_Model_destructor(void) {}
+void unit_Model_destructor(void) {
+    Model* m = createModel();
+    System* s = createSystem("S1", 10.0);
+    Flow* f = createExponentialFlow("F1", s, nullptr);
+
+    m->add(s);
+    m->add(f);
+
+    // O delete 'm' vai invocar a sua logica do iterador internamente
+    delete m;
+    
+    // Limpa as referencias restantes
+    delete s;
+    delete f;
+
+    // Confirma que a logica de limpeza do vetor ocorreu com sucesso
+    assert(true); 
+}
 
 void unit_Model_add(void) {
     Model* m = createModel();

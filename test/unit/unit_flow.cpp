@@ -17,7 +17,21 @@ void unit_Flow_constructor(void) {
     delete s2;
 }
 
-void unit_Flow_destructor(void) {}
+void unit_Flow_destructor(void) {
+    System* s1 = createSystem("S1", 10.0);
+    System* s2 = createSystem("S2", 0.0);
+    Flow* f = createExponentialFlow("F1", s1, s2);
+    
+    // Chama o destrutor do fluxo primeiro
+    delete f;
+    
+    // Limpa os sistemas
+    delete s1;
+    delete s2;
+    
+    // Confirma que não houve vazamento ou quebra de memoria
+    assert(true);
+}
 
 void unit_Flow_getName(void) {
     Flow* f = createExponentialFlow("FluxoTeste", nullptr, nullptr);

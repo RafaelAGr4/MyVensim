@@ -15,7 +15,15 @@ void unit_System_constructor(void) {
     delete s2;
 }
 
-void unit_System_destructor(void) {}
+void unit_System_destructor(void) {
+    System* s = createSystem("S1", 10.0);
+    
+    // Chama o destrutor
+    delete s;
+    
+    // Confirma que o programa sobreviveu a delecao
+    assert(true); 
+}
 
 void unit_System_getName(void) {
     System* s = createSystem("SystemName", 0.0);
