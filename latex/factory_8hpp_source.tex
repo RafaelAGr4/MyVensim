@@ -1,0 +1,24 @@
+\doxysection{factory.\+hpp}
+\hypertarget{factory_8hpp_source}{}\label{factory_8hpp_source}\index{C:/Users/Pedro/Documents/4periodo/EngSoftware\_1/Sprint5/MyVensim/src/factory.hpp@{C:/Users/Pedro/Documents/4periodo/EngSoftware\_1/Sprint5/MyVensim/src/factory.hpp}}
+\doxymbox{\hyperlink{factory_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FACTORY\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FACTORY\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{system_8hpp}{system.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{model_8hpp}{model.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{flow_8hpp}{flow.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \doxymbox{\hyperlink{class_system}{System}}*\ \doxymbox{\hyperlink{factory_8hpp_aeaea0f9f206dccffb1513d9babc513dc}{createSystem}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{double}\ value\ =\ 0.0);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \doxymbox{\hyperlink{class_model}{Model}}*\ \doxymbox{\hyperlink{factory_8hpp_ab6eb2892b3ab436a84a64e974780c361}{createModel}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00038\ \doxymbox{\hyperlink{class_flow}{Flow}}*\ \doxymbox{\hyperlink{factory_8hpp_ae7635464d85ff48fb60b826c36fd7faf}{createExponentialFlow}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}"{}},\ \doxymbox{\hyperlink{class_system}{System}}*\ origin\ =\ \textcolor{keyword}{nullptr},\ \doxymbox{\hyperlink{class_system}{System}}*\ destination\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00048\ \doxymbox{\hyperlink{class_flow}{Flow}}*\ \doxymbox{\hyperlink{factory_8hpp_a321e99a6d2963a43057178b6c5b1a24f}{createLogisticFlow}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}"{}},\ \doxymbox{\hyperlink{class_system}{System}}*\ origin\ =\ \textcolor{keyword}{nullptr},\ \doxymbox{\hyperlink{class_system}{System}}*\ destination\ =\ \textcolor{keyword}{nullptr},\ \textcolor{keywordtype}{double}\ pMax\ =\ 0.0);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FACTORY\_HPP}}
+
+\end{DoxyCode}

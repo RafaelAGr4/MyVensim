@@ -1,52 +1,73 @@
 #include "modelImpl.hpp"
 
-ModelImpl::ModelImpl(double time) : time(time) {}
+// Inicializacao do vetor estatico de controle de instancias
+std::vector<Model*> ModelImpl::models;
+
+ModelImpl::ModelImpl() : time(0.0) {
+    // Registra o modelo recem-criado no vetor global de controle
+    models.push_back(this);
+}
+
+ModelImpl::ModelImpl(const ModelImpl& obj)
+    : time(obj.time), systems(obj.systems), flows(obj.flows) {
+    models.push_back(this);
+}
 
 ModelImpl::~ModelImpl() {
+    // Logica de remocao segura via iterador elogiada pelo professor
+    for (auto it = models.begin(); it != models.end(); ++it) {
+        if (*it == this) {
+            models.erase(it);
+            break;
+        }
+    }
     systems.clear();
     flows.clear();
 }
 
-ModelImpl::ModelImpl(const ModelImpl& other) {
-    this->time = other.time;
-    this->systems = other.systems;
-    this->flows = other.flows;
-}
-
-ModelImpl& ModelImpl::operator=(const ModelImpl& other) {
-    if (this == &other) return *this;
-    this->time = other.time;
-    this->systems = other.systems;
-    this->flows = other.flows;
+ModelImpl& ModelImpl::operator=(const ModelImpl& obj) {
+    if (this == &obj) return *this;
+    time    = obj.time;
+    systems = obj.systems;
+    flows   = obj.flows;
     return *this;
 }
 
+Model::systemIterator ModelImpl::beginSystems() { return systems.begin(); }
+Model::systemIterator ModelImpl::endSystems()   { return systems.end();   }
+Model::flowIterator   ModelImpl::beginFlows()   { return flows.begin();   }
+Model::flowIterator   ModelImpl::endFlows()     { return flows.end();     }
+
 void ModelImpl::add(System* s) { systems.push_back(s); }
-void ModelImpl::add(Flow* f) { flows.push_back(f); }
+void ModelImpl::add(Flow* f)   { flows.push_back(f);   }
 
-double ModelImpl::getTime() const { return time; }
-void ModelImpl::setTime(double t) { time = t; }
+void ModelImpl::remove(System* s) {
+    for (auto it = systems.begin(); it != systems.end(); )
+        if (*it == s) it = systems.erase(it);
+        else ++it;
+}
 
-void ModelImpl::run(double start, double end) {
-    for (time = start; time < end; time += 1.0) {
+void ModelImpl::remove(Flow* f) {
+    for (auto it = flows.begin(); it != flows.end(); )
+        if (*it == f) it = flows.erase(it);
+        else ++it;
+}
+
+void ModelImpl::execute(double start, double final_time, double inc) {
+    time = start;
+    while (time < final_time) {
         std::vector<double> results;
-        
-        // 1. Calcula o resultado de todos os fluxos
-        for (size_t i = 0; i < flows.size(); ++i) {
-            results.push_back(flows[i]->execute());
+        // Calcula todas as taxas simultaneamente com base no estado atual
+        for (Flow* f : flows)
+            results.push_back(f->execute());
+
+        // Aplica as taxas atualizando os estoques de origem e destino correspondentes
+        for (std::size_t i = 0; i < flows.size(); ++i) {
+            System* origem  = flows[i]->getOrigin();
+            System* destino = flows[i]->getDestination();
+            if (origem  != nullptr) origem->setValue(origem->getValue()   - results[i]);
+            if (destino != nullptr) destino->setValue(destino->getValue() + results[i]);
         }
-        
-        // 2. Atualiza os valores dos sistemas afetados pelos fluxos
-        for (size_t i = 0; i < flows.size(); ++i) {
-            System* origin = flows[i]->getOrigin();
-            System* destination = flows[i]->getDestination();
-            
-            if (origin != nullptr) {
-                origin->setValue(origin->getValue() - results[i]);
-            }
-            if (destination != nullptr) {
-                destination->setValue(destination->getValue() + results[i]);
-            }
-        }
+        time += inc;
     }
 }

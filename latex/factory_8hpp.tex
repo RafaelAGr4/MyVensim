@@ -1,0 +1,127 @@
+\doxysection{C:\+/\+\+Users/\+\+Pedro/\+\+Documents/\+4periodo/\+\+Eng\+Software\+\_\+1/\+\+Sprint5/\+\+My\+Vensim/\+src/\+factory.hpp File Reference}
+\hypertarget{factory_8hpp}{}\label{factory_8hpp}\index{C:/Users/Pedro/Documents/4periodo/EngSoftware\_1/Sprint5/MyVensim/src/factory.hpp@{C:/Users/Pedro/Documents/4periodo/EngSoftware\_1/Sprint5/MyVensim/src/factory.hpp}}
+
+
+Funcoes de fabrica para criacao centralizada de objetos do simulador.  
+
+
+{\ttfamily \+\#include "{}system.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}model.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}flow.\+hpp"{}}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+Include dependency graph for factory.\+hpp:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{factory_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{factory_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{factory_8hpp_aeaea0f9f206dccffb1513d9babc513dc}{create\+System}} (std::\+string name="{}"{}, double value=0.\+0)
+\begin{DoxyCompactList}\small\item\em Cria um novo objeto \doxylink{class_system}{System}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{factory_8hpp_ab6eb2892b3ab436a84a64e974780c361}{create\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Cria um novo objeto \doxylink{class_model}{Model}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{factory_8hpp_ae7635464d85ff48fb60b826c36fd7faf}{create\+Exponential\+Flow}} (std::\+string name="{}"{}, \doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}origin=nullptr, \doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}destination=nullptr)
+\begin{DoxyCompactList}\small\item\em Cria um novo objeto de fluxo Exponencial. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{factory_8hpp_a321e99a6d2963a43057178b6c5b1a24f}{create\+Logistic\+Flow}} (std::\+string name="{}"{}, \doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}origin=nullptr, \doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}destination=nullptr, double p\+Max=0.\+0)
+\begin{DoxyCompactList}\small\item\em Cria um novo objeto de fluxo Logistico. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funcoes de fabrica para criacao centralizada de objetos do simulador. 
+
+Expoe estritamente as interfaces abstratas publicas (\doxylink{class_system}{System}, \doxylink{class_model}{Model}, \doxylink{class_flow}{Flow}), isolando completamente as classes concretas do conhecimento do cliente. 
+
+\label{factory_8hpp_doc-func-members}
+\Hypertarget{factory_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{factory_8hpp_ae7635464d85ff48fb60b826c36fd7faf}\index{factory.hpp@{factory.hpp}!createExponentialFlow@{createExponentialFlow}}
+\index{createExponentialFlow@{createExponentialFlow}!factory.hpp@{factory.hpp}}
+\doxysubsubsection{\texorpdfstring{createExponentialFlow()}{createExponentialFlow()}}
+{\footnotesize\ttfamily \label{factory_8hpp_ae7635464d85ff48fb60b826c36fd7faf} 
+\doxymbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} create\+Exponential\+Flow (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{ = {\ttfamily "{}"{}}, }\item[{\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{origin}{ = {\ttfamily nullptr}, }\item[{\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{destination}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Cria um novo objeto de fluxo Exponencial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nome do fluxo. \\
+\hline
+{\em origin} & Ponteiro para o sistema de origem. \\
+\hline
+{\em destination} & Ponteiro para o sistema de destino. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a interface \doxylink{class_flow}{Flow}. 
+\end{DoxyReturn}
+\Hypertarget{factory_8hpp_a321e99a6d2963a43057178b6c5b1a24f}\index{factory.hpp@{factory.hpp}!createLogisticFlow@{createLogisticFlow}}
+\index{createLogisticFlow@{createLogisticFlow}!factory.hpp@{factory.hpp}}
+\doxysubsubsection{\texorpdfstring{createLogisticFlow()}{createLogisticFlow()}}
+{\footnotesize\ttfamily \label{factory_8hpp_a321e99a6d2963a43057178b6c5b1a24f} 
+\doxymbox{\hyperlink{class_flow}{Flow}} \texorpdfstring{$\ast$}{*} create\+Logistic\+Flow (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{ = {\ttfamily "{}"{}}, }\item[{\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{origin}{ = {\ttfamily nullptr}, }\item[{\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{destination}{ = {\ttfamily nullptr}, }\item[{double}]{p\+Max}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})}
+
+
+
+Cria um novo objeto de fluxo Logistico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nome do fluxo. \\
+\hline
+{\em origin} & Ponteiro para o sistema de origem. \\
+\hline
+{\em destination} & Ponteiro para o sistema de destino. \\
+\hline
+{\em p\+Max} & Limite maximo suportado pelo fluxo logistico. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a interface \doxylink{class_flow}{Flow}. 
+\end{DoxyReturn}
+\Hypertarget{factory_8hpp_ab6eb2892b3ab436a84a64e974780c361}\index{factory.hpp@{factory.hpp}!createModel@{createModel}}
+\index{createModel@{createModel}!factory.hpp@{factory.hpp}}
+\doxysubsubsection{\texorpdfstring{createModel()}{createModel()}}
+{\footnotesize\ttfamily \label{factory_8hpp_ab6eb2892b3ab436a84a64e974780c361} 
+\doxymbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} create\+Model (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Cria um novo objeto \doxylink{class_model}{Model}. 
+
+\begin{DoxyReturn}{Returns}
+Ponteiro para a interface \doxylink{class_model}{Model}. 
+\end{DoxyReturn}
+\Hypertarget{factory_8hpp_aeaea0f9f206dccffb1513d9babc513dc}\index{factory.hpp@{factory.hpp}!createSystem@{createSystem}}
+\index{createSystem@{createSystem}!factory.hpp@{factory.hpp}}
+\doxysubsubsection{\texorpdfstring{createSystem()}{createSystem()}}
+{\footnotesize\ttfamily \label{factory_8hpp_aeaea0f9f206dccffb1513d9babc513dc} 
+\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} create\+System (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{ = {\ttfamily "{}"{}}, }\item[{double}]{value}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})}
+
+
+
+Cria um novo objeto \doxylink{class_system}{System}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nome descritivo do sistema (padrao:\+ "{}"{}). \\
+\hline
+{\em value} & Valor inicial do sistema (padrao:\+ 0.\+0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a interface \doxylink{class_system}{System}. 
+\end{DoxyReturn}

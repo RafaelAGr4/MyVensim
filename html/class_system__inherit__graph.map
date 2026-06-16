@@ -1,0 +1,5 @@
+<map id="System" name="System">
+<area shape="rect" id="Node000001" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir...." alt="" coords="18,5,103,160"/>
+<area shape="rect" id="Node000002" href="$class_system_impl.html" title="Implementacao concreta da interface System. Armazena o nome e o valor em atributos privados e impleme..." alt="" coords="5,208,115,427"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,172,63,209,58,208,60,178"/>
+</map>

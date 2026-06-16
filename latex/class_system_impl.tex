@@ -1,0 +1,212 @@
+\doxysection{System\+Impl Class Reference}
+\hypertarget{class_system_impl}{}\label{class_system_impl}\index{SystemImpl@{SystemImpl}}
+
+
+Implementacao concreta da interface \doxylink{class_system}{System}. Armazena o nome e o valor em atributos privados e implementa todos os metodos definidos na interface.  
+
+
+
+
+{\ttfamily \+\#include $<$system\+Impl.\+hpp$>$}
+
+
+
+Inheritance diagram for System\+Impl:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_system_impl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for System\+Impl:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_system_impl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_system_impl_a1100fc8c36a31f872d6f0a280eeb87ea}{System\+Impl}} (std::\+string name="{}"{}, double v=0.\+0)
+\begin{DoxyCompactList}\small\item\em Construtor padrao e parametrizado da classe \doxylink{class_system_impl}{System\+Impl}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_system_impl_a4b34f5be4d297ed9c60c5e973fa851e8}{System\+Impl}} (const \doxymbox{\hyperlink{class_system_impl}{System\+Impl}} \&obj)
+\begin{DoxyCompactList}\small\item\em Construtor de copia de \doxylink{class_system_impl}{System\+Impl}. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_system_impl_a0cd451779458a7bd7c224a48ed163a9e}{\texorpdfstring{$\sim$}{\string~}\+System\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_system_impl}{System\+Impl}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_system_impl}{System\+Impl}} \& \doxymbox{\hyperlink{class_system_impl_a8e4d15426ab9220d919c997c2bee6167}{operator=}} (const \doxymbox{\hyperlink{class_system_impl}{System\+Impl}} \&obj)
+\begin{DoxyCompactList}\small\item\em Operador de atribuicao por copia para \doxylink{class_system_impl}{System\+Impl}. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_system_impl_ad3843b49bbde11738f395c5fbeae4633}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Obtem o nome do sistema. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_system_impl_a039cabfff727be44153fe6cf7c659808}{set\+Name}} (const std::\+string name) override
+\begin{DoxyCompactList}\small\item\em Define o nome do sistema. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_system_impl_abd3ff91586d4474c0a747dc5dd6e0268}{get\+Value}} () const override
+\begin{DoxyCompactList}\small\item\em Obtem o valor armazenado no sistema. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_system_impl_a2e25a20fd72a603e63ef29b910ee7462}{set\+Value}} (double v) override
+\begin{DoxyCompactList}\small\item\em Define o valor do sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_system}{System}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_system_a2fc0f34023977cab9b628aa9f734d88c}{\texorpdfstring{$\sim$}{\string~}\+System}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor virtual puro da interface \doxylink{class_system}{System}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementacao concreta da interface \doxylink{class_system}{System}. Armazena o nome e o valor em atributos privados e implementa todos os metodos definidos na interface. 
+
+\label{class_system_impl_doc-constructors}
+\Hypertarget{class_system_impl_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_system_impl_a1100fc8c36a31f872d6f0a280eeb87ea}\index{SystemImpl@{SystemImpl}!SystemImpl@{SystemImpl}}
+\index{SystemImpl@{SystemImpl}!SystemImpl@{SystemImpl}}
+\doxysubsubsection{\texorpdfstring{SystemImpl()}{SystemImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_system_impl_a1100fc8c36a31f872d6f0a280eeb87ea} 
+System\+Impl::\+\+System\+Impl (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{ = {\ttfamily "{}"{}}, }\item[{double}]{v}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})}
+
+
+
+Construtor padrao e parametrizado da classe \doxylink{class_system_impl}{System\+Impl}. 
+
+Construtor padrao e parametrizado da classe \doxylink{class_system_impl}{System\+Impl}. Initializa o nome e o valor do sistema com os parâmetros fornecidos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nome inicial do sistema (padrao:\+ "{}"{}). \\
+\hline
+{\em v} & Valor inicial do sistema (padrao:\+ 0.\+0). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_system_impl_a4b34f5be4d297ed9c60c5e973fa851e8}\index{SystemImpl@{SystemImpl}!SystemImpl@{SystemImpl}}
+\index{SystemImpl@{SystemImpl}!SystemImpl@{SystemImpl}}
+\doxysubsubsection{\texorpdfstring{SystemImpl()}{SystemImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_system_impl_a4b34f5be4d297ed9c60c5e973fa851e8} 
+System\+Impl::\+\+System\+Impl (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_system_impl}{System\+Impl}} \&}]{obj}{}\end{DoxyParamCaption})}
+
+
+
+Construtor de copia de \doxylink{class_system_impl}{System\+Impl}. 
+
+Construtor de copia de \doxylink{class_system_impl}{System\+Impl}. Copia os atributos name e value do objeto de origem.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Objeto a ser copiado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_system_impl_a0cd451779458a7bd7c224a48ed163a9e}\index{SystemImpl@{SystemImpl}!````~SystemImpl@{\texorpdfstring{$\sim$}{\string~}SystemImpl}}
+\index{````~SystemImpl@{\texorpdfstring{$\sim$}{\string~}SystemImpl}!SystemImpl@{SystemImpl}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SystemImpl()}{\string~SystemImpl()}}
+{\footnotesize\ttfamily \label{class_system_impl_a0cd451779458a7bd7c224a48ed163a9e} 
+System\+Impl::\+\texorpdfstring{$\sim$}{\string~}\+System\+Impl (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destrutor da classe \doxylink{class_system_impl}{System\+Impl}. 
+
+
+
+\label{class_system_impl_doc-func-members}
+\Hypertarget{class_system_impl_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_system_impl_ad3843b49bbde11738f395c5fbeae4633}\index{SystemImpl@{SystemImpl}!getName@{getName}}
+\index{getName@{getName}!SystemImpl@{SystemImpl}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_system_impl_ad3843b49bbde11738f395c5fbeae4633} 
+std::\+string System\+Impl::\+get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obtem o nome do sistema. 
+
+\begin{DoxyReturn}{Returns}
+string com o nome do sistema. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_system_a3bc2509274e6c346e07b0bf1151378c5}{System}}.
+
+\Hypertarget{class_system_impl_abd3ff91586d4474c0a747dc5dd6e0268}\index{SystemImpl@{SystemImpl}!getValue@{getValue}}
+\index{getValue@{getValue}!SystemImpl@{SystemImpl}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily \label{class_system_impl_abd3ff91586d4474c0a747dc5dd6e0268} 
+double System\+Impl::\+get\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obtem o valor armazenado no sistema. 
+
+\begin{DoxyReturn}{Returns}
+double correspondente ao valor atual. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_system_a41b673faa6c199eb8e4f204639fab4f2}{System}}.
+
+\Hypertarget{class_system_impl_a8e4d15426ab9220d919c997c2bee6167}\index{SystemImpl@{SystemImpl}!operator=@{operator=}}
+\index{operator=@{operator=}!SystemImpl@{SystemImpl}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_system_impl_a8e4d15426ab9220d919c997c2bee6167} 
+\doxymbox{\hyperlink{class_system_impl}{System\+Impl}} \& System\+Impl::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_system_impl}{System\+Impl}} \&}]{obj}{}\end{DoxyParamCaption})}
+
+
+
+Operador de atribuicao por copia para \doxylink{class_system_impl}{System\+Impl}. 
+
+Operador de atribuicao por copia para \doxylink{class_system_impl}{System\+Impl}. Garante a copia segura de todos os atributos evitando auto-\/atribuicao.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Objeto do qual os dados serao copiados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia para o proprio objeto alterado. 
+\end{DoxyReturn}
+\Hypertarget{class_system_impl_a039cabfff727be44153fe6cf7c659808}\index{SystemImpl@{SystemImpl}!setName@{setName}}
+\index{setName@{setName}!SystemImpl@{SystemImpl}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_system_impl_a039cabfff727be44153fe6cf7c659808} 
+void System\+Impl::\+set\+Name (\begin{DoxyParamCaption}\item[{const std::\+string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Define o nome do sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Novo nome do sistema. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_system_a78398b0eb04213f7f05482fd9699e71f}{System}}.
+
+\Hypertarget{class_system_impl_a2e25a20fd72a603e63ef29b910ee7462}\index{SystemImpl@{SystemImpl}!setValue@{setValue}}
+\index{setValue@{setValue}!SystemImpl@{SystemImpl}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily \label{class_system_impl_a2e25a20fd72a603e63ef29b910ee7462} 
+void System\+Impl::\+set\+Value (\begin{DoxyParamCaption}\item[{double}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Define o valor do sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Novo valor a ser atribuido. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_system_a28536e1a680eb4b223cd26562a55bb1e}{System}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+\+Pedro/\+\+Documents/\+4periodo/\+\+Eng\+Software\+\_\+1/\+\+Sprint5/\+\+My\+Vensim/\+src/\+\doxymbox{\hyperlink{system_impl_8hpp}{system\+Impl.\+hpp}}\item 
+C:\+/\+\+Users/\+\+Pedro/\+\+Documents/\+4periodo/\+\+Eng\+Software\+\_\+1/\+\+Sprint5/\+\+My\+Vensim/\+src/\+\doxymbox{\hyperlink{system_impl_8cpp}{system\+Impl.\+cpp}}\end{DoxyCompactItemize}

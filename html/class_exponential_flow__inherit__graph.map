@@ -1,0 +1,7 @@
+<map id="ExponentialFlow" name="ExponentialFlow">
+<area shape="rect" id="Node000001" title="Implementacao do fluxo Exponencial. Herda de FlowImpl e calcula a taxa de transferencia baseada em um..." alt="" coords="5,731,141,843"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html" title="Implementacao concreta base da interface Flow. Gerencia o nome, os ponteiros de origem e destino,..." alt="" coords="10,315,136,683"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,695,76,731,71,731,72,700"/>
+<area shape="rect" id="Node000003" href="$class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems (origem e destino),..." alt="" coords="10,5,136,267"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,279,76,315,71,315,73,284"/>
+</map>

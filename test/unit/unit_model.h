@@ -4,8 +4,7 @@
 void unit_Model_constructor(void);
 void unit_Model_destructor(void);
 void unit_Model_add(void);
-void unit_Model_getTime(void);
-void unit_Model_setTime(void);
+// getTime e setTime removidos para refletir a nova arquitetura
 void unit_Model_run(void);
 
 void run_unit_tests_Model(void);

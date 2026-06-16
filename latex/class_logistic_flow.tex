@@ -1,0 +1,143 @@
+\doxysection{Logistic\+Flow Class Reference}
+\hypertarget{class_logistic_flow}{}\label{class_logistic_flow}\index{LogisticFlow@{LogisticFlow}}
+
+
+Implementacao do fluxo Logistico. Herda de \doxylink{class_flow_impl}{Flow\+Impl} e calcula a taxa baseada em um crescimento logistico focado no limite do destino.  
+
+
+
+
+{\ttfamily \+\#include $<$logistic\+Flow.\+hpp$>$}
+
+
+
+Inheritance diagram for Logistic\+Flow:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_logistic_flow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Logistic\+Flow:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_logistic_flow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_logistic_flow_acfcb788fce3b397638bc9146e05a9a22}{Logistic\+Flow}} (std::\+string name="{}"{}, \doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}origin=nullptr, \doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}destination=nullptr, double p\+Max=0.\+0)
+\item 
+virtual \doxymbox{\hyperlink{class_logistic_flow_a39d18cc1ab327715c4b8e0377cff8435}{\texorpdfstring{$\sim$}{\string~}\+Logistic\+Flow}} ()
+\item 
+double \doxymbox{\hyperlink{class_logistic_flow_ae0d2de87d6dbb8cfc2af6db5cd22e884}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Metodo abstrato mantido para as subclasses implementarem a logica matematica. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_logistic_flow_a07965734c1bd38263ca828e0d4649170}{get\+PMax}} () const
+\item 
+void \doxymbox{\hyperlink{class_logistic_flow_a91db9619dd9a66da95a2e59dc1580f95}{set\+PMax}} (double p\+Max)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_flow_impl}{Flow\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_flow_impl_afc694ee6bf220e266d6e0536c4b2b1fe}{Flow\+Impl}} (std::\+string name="{}"{}, \doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}origin=nullptr, \doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}destination=nullptr)
+\begin{DoxyCompactList}\small\item\em Construtor padrao e parametrizado da classe \doxylink{class_flow_impl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_flow_impl_a2981b1758ffef2310105758b4f473c27}{Flow\+Impl}} (const \doxymbox{\hyperlink{class_flow_impl}{Flow\+Impl}} \&obj)
+\begin{DoxyCompactList}\small\item\em Construtor de copia de \doxylink{class_flow_impl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_flow_impl_a2d91539593b336aee4a19048f8a82e8c}{\texorpdfstring{$\sim$}{\string~}\+Flow\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_flow_impl}{Flow\+Impl}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_flow_impl}{Flow\+Impl}} \& \doxymbox{\hyperlink{class_flow_impl_ad923ca284a121114852d8f2948190e37}{operator=}} (const \doxymbox{\hyperlink{class_flow_impl}{Flow\+Impl}} \&obj)
+\begin{DoxyCompactList}\small\item\em Operador de atribuicao por copia. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_flow_impl_aa6e5ff35bd2f7cc2b8eb8a6fa20ce464}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Obtem o nome do fluxo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_flow_impl_a0697f37bf67037c7a6b8fd2671cb0a7d}{set\+Name}} (const std::\+string name) override
+\begin{DoxyCompactList}\small\item\em Define o nome do fluxo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_flow_impl_a9ba5ceada47f79c0f2be2d41b23d5a4d}{set\+Origin}} (\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s) override
+\begin{DoxyCompactList}\small\item\em Define o sistema de origem do fluxo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_flow_impl_ae0d301f4765ffc0ae5b19646c93e9a7e}{set\+Destination}} (\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s) override
+\begin{DoxyCompactList}\small\item\em Define o sistema de destino do fluxo. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_flow_impl_aeb5a6173d25dbdaa19a17b6491336a71}{get\+Origin}} () const override
+\begin{DoxyCompactList}\small\item\em Obtem o sistema de origem do fluxo. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_flow_impl_ac8b68a380ffb64f82bda52e6c897de7a}{get\+Destination}} () const override
+\begin{DoxyCompactList}\small\item\em Obtem o sistema de destino do fluxo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_flow_impl_a356b2f12732af3010c3096e543d504ed}{clear\+Origin}} () override
+\begin{DoxyCompactList}\small\item\em Desconecta (limpa) o sistema de origem do fluxo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_flow_impl_adfd4fee8e1584051b41e30afc7ed13ce}{clear\+Destination}} () override
+\begin{DoxyCompactList}\small\item\em Desconecta (limpa) o sistema de destino do fluxo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_flow}{Flow}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_flow_a325d284a50ca3274b126b21f5c39b9af}{\texorpdfstring{$\sim$}{\string~}\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor virtual puro da interface \doxylink{class_flow}{Flow}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_flow_impl}{Flow\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_flow_impl_afcc3f687245c4a6fa3d26ac386c8221b}{name}}
+\item 
+\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_flow_impl_a5a6226d0da34c1f51883531eb9f91e33}{origin}}
+\item 
+\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_flow_impl_a64bf7b28bcf3d607d7a137c7c03e17bb}{destination}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementacao do fluxo Logistico. Herda de \doxylink{class_flow_impl}{Flow\+Impl} e calcula a taxa baseada em um crescimento logistico focado no limite do destino. 
+
+\label{class_logistic_flow_doc-constructors}
+\Hypertarget{class_logistic_flow_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_logistic_flow_acfcb788fce3b397638bc9146e05a9a22}\index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
+\index{LogisticFlow@{LogisticFlow}!LogisticFlow@{LogisticFlow}}
+\doxysubsubsection{\texorpdfstring{LogisticFlow()}{LogisticFlow()}}
+{\footnotesize\ttfamily \label{class_logistic_flow_acfcb788fce3b397638bc9146e05a9a22} 
+Logistic\+Flow::\+\+Logistic\+Flow (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{ = {\ttfamily "{}"{}}, }\item[{\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{origin}{ = {\ttfamily nullptr}, }\item[{\doxymbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{destination}{ = {\ttfamily nullptr}, }\item[{double}]{p\+Max}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_logistic_flow_a39d18cc1ab327715c4b8e0377cff8435}\index{LogisticFlow@{LogisticFlow}!````~LogisticFlow@{\texorpdfstring{$\sim$}{\string~}LogisticFlow}}
+\index{````~LogisticFlow@{\texorpdfstring{$\sim$}{\string~}LogisticFlow}!LogisticFlow@{LogisticFlow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LogisticFlow()}{\string~LogisticFlow()}}
+{\footnotesize\ttfamily \label{class_logistic_flow_a39d18cc1ab327715c4b8e0377cff8435} 
+Logistic\+Flow::\+\texorpdfstring{$\sim$}{\string~}\+Logistic\+Flow (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\label{class_logistic_flow_doc-func-members}
+\Hypertarget{class_logistic_flow_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_logistic_flow_ae0d2de87d6dbb8cfc2af6db5cd22e884}\index{LogisticFlow@{LogisticFlow}!execute@{execute}}
+\index{execute@{execute}!LogisticFlow@{LogisticFlow}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{class_logistic_flow_ae0d2de87d6dbb8cfc2af6db5cd22e884} 
+double Logistic\+Flow::\+execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metodo abstrato mantido para as subclasses implementarem a logica matematica. 
+
+
+
+Implements \doxymbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}.
+
+\Hypertarget{class_logistic_flow_a07965734c1bd38263ca828e0d4649170}\index{LogisticFlow@{LogisticFlow}!getPMax@{getPMax}}
+\index{getPMax@{getPMax}!LogisticFlow@{LogisticFlow}}
+\doxysubsubsection{\texorpdfstring{getPMax()}{getPMax()}}
+{\footnotesize\ttfamily \label{class_logistic_flow_a07965734c1bd38263ca828e0d4649170} 
+double Logistic\+Flow::\+get\+PMax (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_logistic_flow_a91db9619dd9a66da95a2e59dc1580f95}\index{LogisticFlow@{LogisticFlow}!setPMax@{setPMax}}
+\index{setPMax@{setPMax}!LogisticFlow@{LogisticFlow}}
+\doxysubsubsection{\texorpdfstring{setPMax()}{setPMax()}}
+{\footnotesize\ttfamily \label{class_logistic_flow_a91db9619dd9a66da95a2e59dc1580f95} 
+void Logistic\+Flow::\+set\+PMax (\begin{DoxyParamCaption}\item[{double}]{p\+Max}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+\+Pedro/\+\+Documents/\+4periodo/\+\+Eng\+Software\+\_\+1/\+\+Sprint5/\+\+My\+Vensim/\+src/\+\doxymbox{\hyperlink{logistic_flow_8hpp}{logistic\+Flow.\+hpp}}\item 
+C:\+/\+\+Users/\+\+Pedro/\+\+Documents/\+4periodo/\+\+Eng\+Software\+\_\+1/\+\+Sprint5/\+\+My\+Vensim/\+src/\+\doxymbox{\hyperlink{logistic_flow_8cpp}{logistic\+Flow.\+cpp}}\end{DoxyCompactItemize}

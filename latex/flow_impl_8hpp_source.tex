@@ -1,0 +1,40 @@
+\doxysection{flow\+Impl.\+hpp}
+\hypertarget{flow_impl_8hpp_source}{}\label{flow_impl_8hpp_source}\index{C:/Users/Pedro/Documents/4periodo/EngSoftware\_1/Sprint5/MyVensim/src/flowImpl.hpp@{C:/Users/Pedro/Documents/4periodo/EngSoftware\_1/Sprint5/MyVensim/src/flowImpl.hpp}}
+\doxymbox{\hyperlink{flow_impl_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FLOW\_IMPL\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FLOW\_IMPL\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{flow_8hpp}{flow.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_flow_impl_afc694ee6bf220e266d6e0536c4b2b1fe}{FlowImpl}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_flow}{Flow}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_flow_impl_afcc3f687245c4a6fa3d26ac386c8221b}{name}};\ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{class_system}{System}}*\ \doxymbox{\hyperlink{class_flow_impl_a5a6226d0da34c1f51883531eb9f91e33}{origin}};\ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \doxymbox{\hyperlink{class_system}{System}}*\ \doxymbox{\hyperlink{class_flow_impl_a64bf7b28bcf3d607d7a137c7c03e17bb}{destination}};\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{class_flow_impl_afc694ee6bf220e266d6e0536c4b2b1fe}{FlowImpl}}(std::string\ \doxymbox{\hyperlink{class_flow_impl_afcc3f687245c4a6fa3d26ac386c8221b}{name}}\ =\ \textcolor{stringliteral}{"{}"{}},\ \doxymbox{\hyperlink{class_system}{System}}*\ \doxymbox{\hyperlink{class_flow_impl_a5a6226d0da34c1f51883531eb9f91e33}{origin}}\ =\ \textcolor{keyword}{nullptr},\ \doxymbox{\hyperlink{class_system}{System}}*\ \doxymbox{\hyperlink{class_flow_impl_a64bf7b28bcf3d607d7a137c7c03e17bb}{destination}}\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00024\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{class_flow_impl_afc694ee6bf220e266d6e0536c4b2b1fe}{FlowImpl}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_flow_impl_afc694ee6bf220e266d6e0536c4b2b1fe}{FlowImpl}}\&\ obj);}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_flow_impl_a2d91539593b336aee4a19048f8a82e8c}{\string~FlowImpl}}();}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \doxymbox{\hyperlink{class_flow_impl_afc694ee6bf220e266d6e0536c4b2b1fe}{FlowImpl}}\&\ \doxymbox{\hyperlink{class_flow_impl_ad923ca284a121114852d8f2948190e37}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_flow_impl_afc694ee6bf220e266d6e0536c4b2b1fe}{FlowImpl}}\&\ obj);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_flow_impl_aa6e5ff35bd2f7cc2b8eb8a6fa20ce464}{getName}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_flow_impl_a0697f37bf67037c7a6b8fd2671cb0a7d}{setName}}(\textcolor{keyword}{const}\ std::string\ \doxymbox{\hyperlink{class_flow_impl_afcc3f687245c4a6fa3d26ac386c8221b}{name}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_flow_impl_a9ba5ceada47f79c0f2be2d41b23d5a4d}{setOrigin}}(\doxymbox{\hyperlink{class_system}{System}}*\ s)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_flow_impl_ae0d301f4765ffc0ae5b19646c93e9a7e}{setDestination}}(\doxymbox{\hyperlink{class_system}{System}}*\ s)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ \ \ \ \ \doxymbox{\hyperlink{class_system}{System}}*\ \doxymbox{\hyperlink{class_flow_impl_aeb5a6173d25dbdaa19a17b6491336a71}{getOrigin}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00045\ \ \ \ \ \doxymbox{\hyperlink{class_system}{System}}*\ \doxymbox{\hyperlink{class_flow_impl_ac8b68a380ffb64f82bda52e6c897de7a}{getDestination}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_flow_impl_a356b2f12732af3010c3096e543d504ed}{clearOrigin}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_flow_impl_adfd4fee8e1584051b41e30afc7ed13ce}{clearDestination}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{execute}}()\ =\ 0;\ }
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FLOW\_IMPL\_HPP}}
+
+\end{DoxyCode}
